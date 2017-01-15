@@ -83,6 +83,9 @@
 .font-small-2 {
     font-size: 0.8rem;
 }
+a {
+    cursor: pointer;
+}
 
 /*navbar*/
 

@@ -184,6 +184,10 @@
 			width: 0;
 			right: 72px;
 		}
+
+		label {
+			color: #6d6aaf;
+		}
 	</style>
 </head>
 
@@ -278,7 +282,7 @@
 											<input placeholder="请输入您的Info账号" id="first_name" type="text" class="validate">
 										</div>
 										<div class="input-field no-margin">
-											<input placeholder="请输入您的密码" id="first_name" type="text" class="validate">
+											<input placeholder="请输入您的密码" id="first_name" type="password" class="validate">
 										</div>
 										<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
 									</div>
@@ -713,6 +717,9 @@
 			time_constant: 200,
 			indicators: true
 		});
+		setInterval(function() {
+			$('.carousel').carousel('next');
+		}, 6666);
 	</script>
 
 </body>

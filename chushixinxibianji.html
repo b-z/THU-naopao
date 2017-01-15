@@ -127,7 +127,16 @@
 		}
 
 		.mce-edit-area.mce-container.mce-panel.mce-stack-layout-item.mce-last {
-		    border-width: 0 1px 0 0 !important;
+			/*border-width: 0 1px 0 0 !important;*/
+		}
+
+		.mce-tinymce.mce-container.mce-panel {
+			border: 1px solid rgba(180, 157, 249, 0.5)!important;
+			border-radius: 3px;
+		}
+
+		#project_description_ifr {
+			width: calc(100% - 1px)!important;
 		}
 	</style>
 </head>
@@ -462,7 +471,7 @@
 			],
 			toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
 			// content_css: 'css/materialize.css',
-			skin:'lightgray',
+			skin: 'lightgray',
 			statusbar: false,
 			elementpath: false,
 			theme: 'modern',
