@@ -1,0 +1,4 @@
+.gr:not(.dk),
+.td:not(.dk) {
+	display: none;
+}

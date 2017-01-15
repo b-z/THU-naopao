@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/material-design-icons/1.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Abel'), local('Abel-Regular'), url(../fonts/material-design-icons/2.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.border-debug {
+    border: 1px solid blue;
+}
+.no-lr-margin {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+.no-tb-margin {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+.no-b-margin {
+    margin-bottom: 0!important;
+}
+.no-margin {
+    margin: 0!important;
+}
+.no-padding {
+    padding: 0!important;
+}
+.top-margin {
+    margin-top: 15px;
+}
+.top-margin-2 {
+    margin-top: 30px;
+}
+.top-margin-3 {
+    margin-top: 45px;
+}
+.left-margin {
+    margin-left: 15px;
+}
+.top-padding-3 {
+    padding-top: 45px;
+}
+.big-shadow {
+    box-shadow: 0 16px 24px 2px rgba(180, 180, 180, 0.14), 0 6px 30px 5px rgba(180, 180, 180, 0.12), 0 8px 10px -5px rgba(180, 180, 180, 0.3);
+}
+.border-radius-5 {
+    border-radius: 5px;
+}
+.bottom-line {
+    border-bottom: 1px solid #eeeeee;
+}
+.no-padding-table td, .no-padding-table th {
+    padding: 4px 0;
+}
+.no-background {
+    background-color: transparent!important;
+}
+.font-big-1 {
+    font-size: 1.1rem;
+}
+.font-small-1 {
+    font-size: 0.9rem;
+}
+.font-small-2 {
+    font-size: 0.8rem;
+}
+
+/*navbar*/
+
+#logo-container {
+    position: absolute;
+}
+#logo-container img {
+    height: 27px;
+    margin-top: 15px;
+}
+#logo-text-container {
+    position: absolute;
+    left: calc(19px + 1%);
+}
+#logo-text-container img {
+    height: 21px;
+    margin-top: 22px;
+}
