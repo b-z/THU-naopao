@@ -6,137 +6,233 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
 	<link type="text/css" rel="stylesheet" href="css/common.css" media="screen,projection" />
-	<!-- <link type="text/css" rel="stylesheet" href="css/infoedit_tuandui.css" media="screen,projection" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<style>
-		main {
-			background-image: url(img/big_bg.jpg);
-			background-size: 100%;
-			background-repeat: repeat-y;
-		}
-		/*.container {
-			width:70%;
-		}*/
-
-		#form {
-			padding: 45px 0;
+		.container {
+			width: 92%;
 		}
 
-		.form-title {
-			/*line-height: 45px;*/
-			margin-top: 12px;
+		#nav-menu-container {
+			position: absolute;
+			left: calc(61px + 8%);
 		}
 
-		.rounded-button {
-			border: 1px solid #b49df9;
-			border-radius: 6px;
-			height: 30px;
-			line-height: 30px;
-			box-shadow: inherit;
-			margin: 7.5px 5px 7.5px 0;
+		#top-area-container {
+			background-image: url(img/top_bg.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 400px;
+			background-position: right center;
+			/*border: 1px solid;*/
 		}
 
-		textarea {
-			margin-bottom: 0!important;
-		}
-
-		#button-confirm {
+		#top-img {
+			position: relative;
+			/*background-image: url(img/tmp.png);*/
+			/*background-size: cover;*/
+			/*background-repeat: no-repeat;*/
 			width: 100%;
+			height: 300px!important;
+			margin-top: 50px;
+			/*border: 1px solid blue;*/
 		}
 
-		.chip {
-			cursor: pointer;
+		#top-img-text-container {
+			height: 100px;
+			width: 54%;
+			background-color: rgba(255, 255, 255, 0.6);
+			position: absolute;
+			bottom: 30px;
+			color: black;
 		}
 
-		.chips .chip.selected:not(.triangle-label-grey) {
-			border-top: 12px solid #6d6aaf;
-			border-bottom: 12px solid #6d6aaf;
-			border-right: 12px solid transparent;
-			line-height: 0;
-			border-radius: 0;
-			background-color: transparent;
-			height: 24px;
+		#top-login-container {
+			height: 300px;
+			margin-top: 50px;
+			min-width: 270px;
+			background-color: rgba(255, 255, 255, 0.96);
+			/*border: 1px solid blue;*/
+		}
+
+		#top-img-text-tag {
+			position: absolute;
+			background-image: url(img/tag.png);
+			top: 30px;
+			left: 14px;
+			transform: scale(1);
+			transform-origin: 0 0;
+			background-repeat: no-repeat;
+			background-size: contain;
 			color: white;
+			/*background-color: #6d6cad;*/
+			padding-left: 5px;
+			padding-right: 35px;
+			font-size: 10px;
+			line-height: 14px;
 		}
 
-		.chip:not(.triangle-label-grey) {
-			border-top: 12px solid #8a88bf;
-			border-bottom: 12px solid #8a88bf;
-			border-right: 12px solid transparent;
-			line-height: 0;
-			border-radius: 0;
-			background-color: transparent;
-			height: 24px;
+		#bottom-left-text-tag {
+			position: relative;
+			background-image: url(img/tag.png);
+			top: -29px;
+			margin-bottom: -20px;
+			/*left: 13px;*/
+			/*transform: scale(0.6);*/
+			/*transform-origin: 0 0;*/
+			background-repeat: no-repeat;
+			background-size: contain;
 			color: white;
+			/*background-color: #6d6cad;*/
+			padding-left: 5px;
+			padding-right: 30px;
+			font-size: 18px;
+			/*line-height: 14px;*/
 		}
 
-		.chip i {
-			line-height: 0!important;
+		#top-img-text-title {
+			position: absolute;
+			top: 50%;
+			left: 1rem;
+			font-size: 20px;
 		}
 
-		.triangle-label-grey {
-			border-top: 12px solid #eeeeee;
-			border-bottom: 12px solid #eeeeee;
-			color: #9e9e9e;
-			border-right: 12px solid transparent;
-			line-height: 0;
-			border-radius: 0;
-			background-color: transparent;
-			height: 24px;
-			margin-right: 8px;
-			margin-bottom: 8px;
+		#top-login-user-type {
+			height: 46px;
+			padding-top: 12px;
 		}
 
-		#chips-area {
-			padding: 1rem;
-			border: 1px dotted #cccccc;
-		}
-
-		.gender-box {
-			height: 30px;
-			margin-top: 7.5px;
-			margin-bottom: 7.5px;
-			/*padding:15px 0;*/
-		}
-
-		.gender-item {
-			border: 1px solid #b49df9;
-			color: #d1d1d1;
+		.user-type-icon {
+			width: 25px;
+			height: 20px;
 			float: left;
-			width: 80px;
-			line-height: 30px;
-			text-align: center;
-			margin-right: -1px;
-			border-radius: 3px;
-			cursor: pointer;
+			background-repeat: no-repeat;
+			background-size: contain;
 		}
 
-		.gender-item.active {
-			color: #ffffff;
-			background-color: #6d6aaf;
+		.user-type-icon.personal {
+			background-image: url(img/geren.png);
 		}
 
-		.bordered .collection-item {
-			border: 1px solid rgba(180, 157, 249, 0.5)!important;
-			margin-bottom: 10px;
+		.user-type-icon.vip {
+			background-image: url(img/daka_.png);
 		}
 
-		.mce-ico {
-			color: #888!important;
+		.user-type-icon.team {
+			background-image: url(img/tuandui_.png);
 		}
 
-		.mce-edit-area.mce-container.mce-panel.mce-stack-layout-item.mce-last {
-			/*border-width: 0 1px 0 0 !important;*/
+		#login-button {
+			width: 100%;
+			margin-bottom: 20px;
 		}
 
-		.mce-tinymce.mce-container.mce-panel {
-			border: 1px solid rgba(180, 157, 249, 0.5)!important;
-			border-radius: 3px;
+		#bottom-left {
+			height: 1000px;
+			margin-top: 40px;
 		}
 
-		#project_description_ifr {
-			width: calc(100% - 1px)!important;
+		#bottom-right {
+			min-width: 270px;
+			margin-top: 40px;
+			position: relative;
+		}
+
+		.bottom-right-rank-container {
+			height: 32px;
+			width: 32px;
+			float: left;
+		}
+
+		.bottom-right-rank-container-text {
+			height: 0;
+			margin-top: 9px;
+		}
+
+		.bottom-left-item {
+			transition: .2s ease-out;
+			padding-bottom: 5px;
+		}
+
+		.bottom-left-item:hover {
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			background-color: white;
+		}
+
+		.bottom-left-item-label {
+			position: relative;
+			left: 15px;
+		}
+
+		.bottom-left-item-time {
+			position: relative;
+			right: 15px;
+		}
+
+		.bottom-left-section {
+			margin-bottom: 1rem;
+		}
+
+		.collection-item {
+			line-height: 2rem!important;
+		}
+
+		.bottom-left-3col-item {
+			padding: 15px;
+		}
+
+		#bottom-right-circle-button {
+			position: absolute;
+			top: -28px;
+			height: 0;
+			width: 0;
+			right: 72px;
+		}
+
+		label {
+			color: #6d6aaf;
+		}
+
+		.carousel .carousel-item img {
+			/* width: 100%; */
+			height: 100%;
+			width: initial;
+			/*注意: 这个图片不能太窄，宽度必须多留出来一点*/
+		}
+
+		.article-cover-image-container {
+			border-radius: 10px;
+			width: 100%;
+			overflow: hidden;
+			line-height: 0!important;
+			height: 150px;
+		}
+
+		.article-cover-image {
+			border-radius: 10px;
+			width: 100%;
+			/*overflow: hidden;*/
+			/*height: 150px;*/
+		}
+
+		.article-cover-buttons {
+			font-size: 12px;
+		}
+
+		.article-cover-buttons i {
+			font-size: 15px;
+			transform: translateY(3px);
+		}
+
+		.bottom-left-divider .divider {
+			width: calc(50% - 90px);
+			margin-top: 9px;
+		}
+		.bottom-left-divider .center {
+			width: 180px;
+		}
+		.bottom-left-divider a{
+			padding: 0 20px;
 		}
 	</style>
 </head>
@@ -156,7 +252,7 @@
 						<img src="img/naopao.png">
 					</a>
 				</div>
-				<div id="nav-menu-container" class="hide">
+				<div id="nav-menu-container">
 					<ul>
 						<li class="active"><a>分享创意</a></li>
 						<li><a>围观项目</a></li>
@@ -168,314 +264,385 @@
 		</nav>
 	</div>
 	<main class="">
-		<div class="container top-padding-3">
-			<div class="card-panel big-shadow" id="form">
-				<div class="row dk gr td">
-					<div class="col s3 m2 right-align font-big-1 grey-text text-darken-4">
-						<b class="gr">个人信息</b>
-						<b class="dk td">姓名/项目名称(拉取)</b>
-					</div>
-				</div>
-				<div class="row gr">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						昵称
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<input placeholder="请输入您的昵称" id="" type="text" class="validate no-margin">
-					</div>
-				</div>
-				<div class="row dk gr td" style="margin-bottom:-10px;">
-					<div class="col s3 m2 right-align grey-text text-darken-2" style="line-height:80px;">
-						<span class="dk gr">头像</span>
-						<span class="td">Logo</span>
-					</div>
-					<div class="col s9 m8">
-						<img class="circle grey lighten-3" src="img/avatar.png" width=80px>
-					</div>
-				</div>
-				<div class="row top-margin-2 gr">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						性别
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<div class="gender-box">
-							<div class="gender-item active">
-								男
+		<!-- top -->
+		<div class="white">
+			<div id="top-area-container">
+				<div class="container">
+					<div class="row">
+						<div class="col s8">
+							<div id="top-img" class="carousel carousel-slider center" data-indicators="true">
+								<!-- <div class="carousel-fixed-item center">
+									<a class="btn waves-effect white grey-text darken-text-2">button</a>
+								</div> -->
+								<div class="carousel-item" href="#one!">
+									<!-- <h2>First Panel</h2> -->
+									<!-- <p class="white-text">This is your first panel</p> -->
+									<img src="img/tmp.png">
+									<div id="top-img-text-container">
+										<div id="top-img-text-tag">The news</div>
+										<div id="top-img-text-title">微软的Surface Dial</div>
+									</div>
+								</div>
+								<div class="carousel-item" href="#two!">
+									<div id="top-img-text-container">
+										<div id="top-img-text-tag">The news</div>
+										<div id="top-img-text-title">微软的Surface Dial</div>
+									</div>
+								</div>
+								<div class="carousel-item" href="#three!">
+									<div id="top-img-text-container">
+										<div id="top-img-text-tag">The news</div>
+										<div id="top-img-text-title">微软的Surface Dial</div>
+									</div>
+								</div>
+								<div class="carousel-item" href="#four!">
+									<div id="top-img-text-container">
+										<div id="top-img-text-tag">The news</div>
+										<div id="top-img-text-title">微软的Surface Dial</div>
+									</div>
+								</div>
 							</div>
-							<div class="gender-item">
-								女
+							<!-- <div id="top-img">
+								<div id="top-img-text-container">
+									<div id="top-img-text-tag">The news</div>
+									<div id="top-img-text-title">微软的Surface Dial</div>
+								</div>
+							</div> -->
+						</div>
+						<div class="col s4">
+							<div id="top-login-container" class="card-panel">
+								<div id="top-login-user-type" class="row no-margin">
+									<div class="col s4">
+										<span class="user-type-icon personal"></span>个人
+									</div>
+									<div class="col s4">
+										<span class="user-type-icon vip"></span>大咖
+									</div>
+									<div class="col s4">
+										<span class="user-type-icon team"></span>团队
+									</div>
+								</div>
+								<div class="row no-margin">
+									<div class="col s12">
+										<div class="input-field no-margin">
+											<input placeholder="请输入您的Info账号" id="first_name" type="text" class="validate">
+										</div>
+										<div class="input-field no-margin">
+											<input placeholder="请输入您的密码" id="first_name" type="password" class="validate">
+										</div>
+										<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
+									</div>
+								</div>
+								<div class="row no-margin">
+									<div class="col s7">
+										<input type="checkbox" id="remember_password" />
+										<label for="remember_password">记住我</label>
+									</div>
+									<div class="col s5 right-align">
+										<a class="deep-purple-text text-lighten-2">忘记密码</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row top-margin-2 td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						项目名称
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<input placeholder="请填写项目名称" id="" type="text" class="validate no-margin">
-					</div>
-				</div>
-				<div class="row top-margin-2 dk gr td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						简介
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<input placeholder="请一句话介绍自己的职业和兴趣" id="" type="text" class="validate no-margin">
-					</div>
-				</div>
-				<div class="row top-margin-2 gr">
-					<!-- 个人 -->
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						出生日期
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<input type="date" class="datepicker no-margin" data-value="1990/01/01">
-					</div>
-				</div>
-				<div class="row top-margin-2 gr">
-					<!-- 个人 -->
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						教育信息
-					</div>
-					<div class="col s8 no-margin">
-						<div class="no-margin">
-							<div class="input-field col s4 no-margin" style="padding-left:0;">
-								<input placeholder="请填写学校名称" id="" type="text" class="validate no-margin">
-							</div>
-							<div class="input-field col s4 no-margin">
-								<input placeholder="请填写院系名称" id="" type="text" class="validate no-margin">
-							</div>
-							<div class="input-field col s4 no-margin" style="padding-right:0;">
-								<input placeholder="请填写您的专业" id="" type="text" class="validate no-margin">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row top-margin-2 dk">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						公司
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<input placeholder="请输入您的公司名称" id="" type="text" class="validate no-margin">
-					</div>
-				</div>
-				<div class="row top-margin-2 dk td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						职位
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<input placeholder="请输入您的职位" id="" type="text" class="validate no-margin">
-					</div>
-				</div>
-				<div class="row top-margin-2 dk">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						大咖类型
-					</div>
-					<div class="col s8 m8">
-						<a class="rounded-button waves-effect btn-flat white-text deep-purple lighten-3">专家</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">导师</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">企业家</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">投资人</a>
-					</div>
-				</div>
-				<div class="row top-margin-2 td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						项目领域
-					</div>
-					<div class="col s8 m8">
-						<a class="rounded-button waves-effect btn-flat white-text deep-purple lighten-3">电子商务</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">媒体资讯</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">健康医疗</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">营销广告</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">金融</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">旅游</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">硬件</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">文化体育</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">生活消费</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">企业服务</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">生态农业</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">企业服务</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">汽车交通</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">O2O</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">视频娱乐</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">搜索安全</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">其他</a>
-					</div>
-				</div>
-				<div class="row top-margin-2 td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						项目阶段
-					</div>
-					<div class="col s8 m8">
-						<a class="rounded-button waves-effect btn-flat white-text deep-purple lighten-3">初创</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">天使</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">A轮</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">B轮</a>
-						<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">其他</a>
-					</div>
-				</div>
-				<div class="row top-margin-2 td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						项目描述
-						<br>
-						<span class="text-lighten-1 grey-text">
-							(1000字内)
-						</span>
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<textarea id="project_description" class="materialize-textarea" length="1000"></textarea>
-					</div>
-				</div>
-				<div class="row top-margin-2 dk gr">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						个人介绍
-						<br>
-						<span class="text-lighten-1 grey-text">
-							(80字内)
-						</span>
-					</div>
-					<div class="input-field col s8 m8 no-margin">
-						<textarea id="" class="materialize-textarea" length="80"></textarea>
-					</div>
-				</div>
-				<div class="row top-margin-2 td">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						核心成员
-					</div>
-					<div class="col s8 m8 no-margin">
-						<div class="collection bordered">
-							<div class="collection-item avatar">
-								<img src="img/excited.jpeg" alt="" class="circle">
-								<span class="title">姓名</span>
-								<p class="grey-text">职位</p>
-								<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">编辑</div>
-							</div>
-							<div class="collection-item avatar">
-								<img src="img/excited.jpeg" alt="" class="circle">
-								<span class="title">姓名</span>
-								<p class="grey-text">职位</p>
-								<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">编辑</div>
-							</div>
-						</div>
-						<div class="right-align">
-							<a class=" waves-effect waves-light btn deep-purple lighten-2">
-								<i class="material-icons left">add</i>添加
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="row top-margin-2 gr">
-					<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-						个性标签
-					</div>
-					<div class="col s8 m8">
-						<div class="chips chips-placeholder"></div>
-						<div id="chips-area">
-							<div>
-								<!-- 标签区域 -->
-								<a class="chip triangle-label-grey">计算机硬件</a>
-								<a class="chip triangle-label-grey">信息传媒</a>
-								<a class="chip triangle-label-grey">出版业</a>
-								<a class="chip triangle-label-grey">电影录音</a>
-								<a class="chip triangle-label-grey">广播电视</a>
-								<a class="chip triangle-label-grey">通信</a>
-								<a class="chip triangle-label-grey">金融</a>
-								<a class="chip triangle-label-grey">银行</a>
-								<a class="chip triangle-label-grey">资本投资</a>
-								<a class="chip triangle-label-grey">证券投资</a>
-								<a class="chip triangle-label-grey">保险</a>
-								<a class="chip triangle-label-grey">信贷</a>
-								<a class="chip triangle-label-grey">财务</a>
-								<a class="chip triangle-label-grey">审计</a>
-							</div>
-							<div class="right-align">
-								<a class="deep-purple-text text-lighten-4">换一批</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row top-margin-2">
-					<div class="col s6 m4 l3 offset-s3 offset-m2 offset-l2">
-						<a id="button-confirm" class="btn waves-effect waves-light deep-purple lighten-2">
-							<span class="dk td">提交</span>
-							<span class="gr">保存</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div style="height:50px;">
-				<!-- 支撑底部空间 -->
 			</div>
 		</div>
+		<!-- content -->
+		<div class="container">
+			<div class="row">
+				<div class="col s8">
+					<div id="bottom-left">
+						<!-- 左下方区域 -->
+						<div class="section bottom-left-section">
+							<div class="row no-lr-margin bottom-left-divider">
+								<div class="left divider col"></div>
+								<div class="center col font-small-1">
+									<a class="deep-purple-text text-lighten-3">最新</a> ·
+									<a class="grey-text text-lighten-1">最热</a>
+								</div>
+								<div class="right divider col"></div>
+							</div>
+							<!-- 下面是一个item，从这里开始 -->
+							<div class="collection bottom-left-item z-depth-1 white">
+								<div class="row no-b-margin top-margin">
+									<div class="col s6">
+										<div class="bottom-left-item-label font-small-1">
+											<span class="grey-text text-darken-3">创意领域</span>
+											<span class="grey-text left-margin">生活</span>
+										</div>
+									</div>
+									<div class="col s6 right-align">
+										<div class="bottom-left-item-time grey-text font-small-2">
+											发布于2017-01-17 22:22
+										</div>
+									</div>
+								</div>
+								<div class="collection-item avatar no-background">
+									<img src="img/tmp3.png" alt="" class="circle">
+									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
+									<p class="grey-text">
+										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
+									</p>
+									<div class="row no-tb-margin">
+										<div class="col s4">
+											<div class="article-cover-image-container">
+												<img src="img/cat.png" class="article-cover-image">
+											</div>
+										</div>
+										<div class="col s8 title grey-text text-darken-4">
+											现在有一种GPS 很好的 只有火柴盒大小 很管用的，不用外接电源，像手机一样充电你可以隐藏在坐垫底下，
+											<br> 用手机或上网都可以随时查到车的位置，
+											<br> 价格也不贵200元左右淘宝上就有，
+											<br> 你直接打GPS定位器 就可以搜到 我也在用 呵呵呵呵...
+											<a class="deep-purple-text text-lighten-4 font-small-2">显示全部</a>
+										</div>
+									</div>
+									<div class="article-cover-buttons">
+										<a class="grey-text text-lighten-1"><i class="material-icons">star_border</i>收藏(2)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">thumb_up</i>点赞(3)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">comment</i>评论(3)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">share</i>分享(3)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">report_problem</i>举报</a>
+									</div>
+								</div>
+							</div>
+							<!-- 到这里结束 -->
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div id="bottom-right" class="card-panel big-shadow">
+						<div id="bottom-right-circle-button">
+							<a class="btn-floating btn-large waves-effect waves-light deep-purple lighten-2"><i class="material-icons">email</i></a>
+						</div>
+						<div class="row no-lr-margin">
+							<div class="col s12">
+								<img src="img/tmp2.png" width=100% class="border-radius-5">
+							</div>
+						</div>
+						<div class="row no-margin bottom-line">
+							<div class="col s6 left-align grey-text text-darken-2">
+								<b>推荐关注</b>
+							</div>
+							<div class="col s6 right-align">
+								<a class="deep-purple-text text-lighten-4" style="font-size:12px;">换一批</a>
+							</div>
+						</div>
+						<div class="row no-lr-margin">
+							<div class="collection">
+								<!-- @bug: 屏幕窄的时候字数太多就超出去了 -->
+								<a class="collection-item avatar">
+									<img src="img/excited.jpeg" alt="" class="circle">
+									<b class="title deep-purple-text text-lighten-2">宝宝</b>
+									<p class="grey-text">做一个有创意的吃货。</p>
+									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
+								</a>
+								<a class="collection-item avatar">
+									<img src="img/excited.jpeg" alt="" class="circle">
+									<b class="title deep-purple-text text-lighten-2">宝宝</b>
+									<p class="grey-text">做第二个有创意的吃货。</p>
+									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
+								</a>
+								<a class="collection-item avatar">
+									<img src="img/excited.jpeg" alt="" class="circle">
+									<b class="title deep-purple-text text-lighten-2">宝宝</b>
+									<p class="grey-text">做第三个有创意的吃货。</p>
+									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
+								</a>
+							</div>
+						</div>
+						<div class="row no-margin bottom-line">
+							<div class="col s6 left-align grey-text text-darken-2">
+								<b>创意达人</b>
+							</div>
+							<div class="col s6 right-align">
+								<a class="deep-purple-text text-lighten-4" style="font-size:12px;">本周</a>
+								<span class="grey-text text-lighten-1" style="font-size:12px;">•</span>
+								<a class="grey-text text-darken-1" style="font-size:12px;">本月</a>
+							</div>
+						</div>
+						<div class="row no-lr-margin">
+							<div class="col s12">
+								<table class="highlight centered no-padding-table top-margin">
+									<thead>
+										<tr>
+											<!-- 排名使用两列 -->
+											<th data-field="rank" colspan="2" style="width: 1%;">排名</th>
+											<th data-field="name">昵称</th>
+											<th data-field="like">点赞数</th>
+											<th data-field="score">积分</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>
+												<img height=32px src="img/rank1.png">
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>宝宝</td>
+											<td>111</td>
+											<td>600</td>
+										</tr>
+										<tr>
+											<td>
+												<img height=32px src="img/rank2.png">
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>傻萌萌</td>
+											<td>90</td>
+											<td>500</td>
+										</tr>
+										<tr>
+											<td>
+												<img height=32px src="img/rank3.png">
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>SHUHD</td>
+											<td>80</td>
+											<td>444</td>
+										</tr>
+										<tr>
+											<td>
+												4
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>人们的儿...</td>
+											<td>60</td>
+											<td>345</td>
+										</tr>
+										<tr>
+											<td>
+												5
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>董小姐</td>
+											<td>55</td>
+											<td>233</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="row no-margin bottom-line">
+							<div class="col s6 left-align grey-text text-darken-2">
+								<b>意见领袖</b>
+							</div>
+							<div class="col s6 right-align">
+								<a class="deep-purple-text text-lighten-4" style="font-size:12px;">本周</a>
+								<span class="grey-text text-lighten-1" style="font-size:12px;">•</span>
+								<a class="grey-text text-darken-1" style="font-size:12px;">本月</a>
+							</div>
+						</div>
+						<div class="row no-lr-margin">
+							<div class="col s12">
+								<table class="highlight centered no-padding-table top-margin">
+									<thead>
+										<tr>
+											<!-- 排名使用两列 -->
+											<th data-field="rank" colspan="2" style="width: 1%;">排名</th>
+											<th data-field="name">昵称</th>
+											<th data-field="like">点赞数</th>
+											<th data-field="score">积分</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>
+												<img height=32px src="img/rank1.png">
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>宝宝</td>
+											<td>111</td>
+											<td>600</td>
+										</tr>
+										<tr>
+											<td>
+												<img height=32px src="img/rank2.png">
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>傻萌萌</td>
+											<td>90</td>
+											<td>500</td>
+										</tr>
+										<tr>
+											<td>
+												<img height=32px src="img/rank3.png">
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>SHUHD</td>
+											<td>80</td>
+											<td>444</td>
+										</tr>
+										<tr>
+											<td>
+												4
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>人们的儿...</td>
+											<td>60</td>
+											<td>345</td>
+										</tr>
+										<tr>
+											<td>
+												5
+											</td>
+											<td>
+												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+											</td>
+											<td>董小姐</td>
+											<td>55</td>
+											<td>233</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
 	</main>
 
 
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 
 	<script>
-		$('.datepicker').pickadate({
-			monthsFull: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
-			monthsShort: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
-			weekdaysFull: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
-			weekdaysShort: ['日', '一', '二', '三', '四', '五', '六'],
-			today: '',
-			clear: '',
-			close: '确定',
-			firstDay: 0,
-			format: 'yyyy 年 mm 月 dd 日',
-			formatSubmit: 'yyyy/mm/dd',
-			selectYears: 50, // Creates a dropdown of 15 years to control year
-			selectMonths: true, // Creates a dropdown to control month
-			max: [2010, 11, 31]
-				// editable: true
+		$('.carousel.carousel-slider').carousel({
+			full_width: true,
+			time_constant: 200,
+			indicators: true
 		});
-		$('.chips-placeholder').material_chip({
-			placeholder: '+ 添加个性标签',
-			secondaryPlaceholder: '+ 标签'
-		});
-		$('.triangle-label-grey').click(function(e) {
-			// console.log(e);
-			var txt = e.target.innerText;
-			var data = $('.chips').material_chip('data');
-			var flag = false;
-			data.forEach(function(e, i) {
-				if (e.tag == txt) {
-					flag = true;
-					return;
-				}
-			});
-			if (flag) {
-				return;
-			}
-			data.push({
-				tag: txt
-			});
-			$('.chips').material_chip({
-				data: data,
-				placeholder: '+ 添加个性标签',
-				secondaryPlaceholder: '+ 标签'
-			});
-		});
-		tinymce.init({
-			selector: '#project_description',
-			height: 200,
-			menubar: false,
-			plugins: [
-				'advlist autolink lists link image charmap print preview anchor',
-				'searchreplace visualblocks code fullscreen',
-				'insertdatetime media table contextmenu paste code'
-			],
-			toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-			// content_css: 'css/materialize.css',
-			skin: 'lightgray',
-			statusbar: false,
-			elementpath: false,
-			theme: 'modern',
-		});
+		setInterval(function() {
+			$('.carousel').carousel('next');
+		}, 6666);
 	</script>
 
 </body>
