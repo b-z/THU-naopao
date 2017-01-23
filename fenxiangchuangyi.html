@@ -228,10 +228,12 @@
 			width: calc(50% - 90px);
 			margin-top: 9px;
 		}
+
 		.bottom-left-divider .center {
 			width: 180px;
 		}
-		.bottom-left-divider a{
+
+		.bottom-left-divider a {
 			padding: 0 20px;
 		}
 	</style>
@@ -269,77 +271,40 @@
 			<div id="top-area-container">
 				<div class="container">
 					<div class="row">
-						<div class="col s8">
-							<div id="top-img" class="carousel carousel-slider center" data-indicators="true">
-								<!-- <div class="carousel-fixed-item center">
-									<a class="btn waves-effect white grey-text darken-text-2">button</a>
-								</div> -->
-								<div class="carousel-item" href="#one!">
-									<!-- <h2>First Panel</h2> -->
-									<!-- <p class="white-text">This is your first panel</p> -->
-									<img src="img/tmp.png">
-									<div id="top-img-text-container">
-										<div id="top-img-text-tag">The news</div>
-										<div id="top-img-text-title">微软的Surface Dial</div>
-									</div>
-								</div>
-								<div class="carousel-item" href="#two!">
-									<div id="top-img-text-container">
-										<div id="top-img-text-tag">The news</div>
-										<div id="top-img-text-title">微软的Surface Dial</div>
-									</div>
-								</div>
-								<div class="carousel-item" href="#three!">
-									<div id="top-img-text-container">
-										<div id="top-img-text-tag">The news</div>
-										<div id="top-img-text-title">微软的Surface Dial</div>
-									</div>
-								</div>
-								<div class="carousel-item" href="#four!">
-									<div id="top-img-text-container">
-										<div id="top-img-text-tag">The news</div>
-										<div id="top-img-text-title">微软的Surface Dial</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div id="top-img">
-								<div id="top-img-text-container">
-									<div id="top-img-text-tag">The news</div>
-									<div id="top-img-text-title">微软的Surface Dial</div>
-								</div>
-							</div> -->
-						</div>
-						<div class="col s4">
-							<div id="top-login-container" class="card-panel">
-								<div id="top-login-user-type" class="row no-margin">
-									<div class="col s4">
-										<span class="user-type-icon personal"></span>个人
-									</div>
-									<div class="col s4">
-										<span class="user-type-icon vip"></span>大咖
-									</div>
-									<div class="col s4">
-										<span class="user-type-icon team"></span>团队
-									</div>
-								</div>
-								<div class="row no-margin">
-									<div class="col s12">
-										<div class="input-field no-margin">
-											<input placeholder="请输入您的Info账号" id="first_name" type="text" class="validate">
+						<div class="col s12 m10 offset-m1">
+							<div class="card-panel" style="height: 300px;margin-top: 50px;background-color: rgba(255, 255, 255, 0.96);">
+								<div class="row" style="height:100%;">
+									<div class="col s7" style="height:100%;border-right:1px solid #eee;padding:0 8%;">
+										<div class="input-field">
+											<input type="text" placeholder="请输入关键字搜索">
+											<a class="deep-purple-text text-lighten-3">
+												<i class="material-icons prefix" style="right:0;top:0;line-height:45px;">search</i>
+											</a>
 										</div>
-										<div class="input-field no-margin">
-											<input placeholder="请输入您的密码" id="first_name" type="password" class="validate">
+										<p>
+											<a class="rounded-button waves-effect btn-flat white-text deep-purple lighten-3">学术</a>
+											<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">商业</a>
+											<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">生活</a>
+											<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">其他</a>
+											<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">创意种子大赛</a>
+											<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">能源创客</a>
+										</p>
+									</div>
+									<div class="col s5" style="padding:0 8%;">
+										<div class="input-field">
+											<div class="waves-effect waves-light btn btn-flat deep-purple lighten-2 white-text" style="width:100%;">
+												<i class="material-icons right">expand_more</i> 发布
+											</div>
 										</div>
-										<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
-									</div>
-								</div>
-								<div class="row no-margin">
-									<div class="col s7">
-										<input type="checkbox" id="remember_password" />
-										<label for="remember_password">记住我</label>
-									</div>
-									<div class="col s5 right-align">
-										<a class="deep-purple-text text-lighten-2">忘记密码</a>
+										<!-- <div class="input-field">
+											<select style="text-align:center;">
+												<option value="" disabled selected>发布</option>
+												<option value="1">发布创意</option>
+												<option value="2">创意种子大赛</option>
+												<option value="3">能源创客</option>
+												<option value="4">其他比赛</option>
+											</select>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -363,6 +328,55 @@
 								</div>
 								<div class="right divider col"></div>
 							</div>
+							<!-- 下面是一个item，从这里开始 -->
+							<div class="collection bottom-left-item z-depth-1 white">
+								<div class="row no-b-margin top-margin">
+									<div class="col s6">
+										<div class="bottom-left-item-label font-small-1">
+											<span class="grey-text text-darken-3">创意领域</span>
+											<span class="grey-text left-margin">生活</span>
+										</div>
+									</div>
+									<div class="col s6 right-align">
+										<div class="bottom-left-item-time grey-text font-small-2">
+											发布于2017-01-17 22:22
+										</div>
+									</div>
+								</div>
+								<div class="collection-item avatar no-background">
+									<img src="img/tmp3.png" alt="" class="circle">
+									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
+									<p class="grey-text">
+										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
+									</p>
+									<div class="row no-tb-margin">
+										<div class="col s4">
+											<div class="article-cover-image-container">
+												<img src="img/cat.png" class="article-cover-image">
+											</div>
+										</div>
+										<div class="col s8 title grey-text text-darken-4">
+											现在有一种GPS 很好的 只有火柴盒大小 很管用的，不用外接电源，像手机一样充电你可以隐藏在坐垫底下，
+											<br> 用手机或上网都可以随时查到车的位置，
+											<br> 价格也不贵200元左右淘宝上就有，
+											<br> 你直接打GPS定位器 就可以搜到 我也在用 呵呵呵呵...
+											<a class="deep-purple-text text-lighten-4 font-small-2">显示全部</a>
+										</div>
+									</div>
+									<div class="article-cover-buttons">
+										<a class="grey-text text-lighten-1"><i class="material-icons">star_border</i>收藏(2)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">thumb_up</i>点赞(3)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">comment</i>评论(3)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">share</i>分享(3)</a>
+										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+										<a class="grey-text text-lighten-1"><i class="material-icons">report_problem</i>举报</a>
+									</div>
+								</div>
+							</div>
+							<!-- 到这里结束 -->
 							<!-- 下面是一个item，从这里开始 -->
 							<div class="collection bottom-left-item z-depth-1 white">
 								<div class="row no-b-margin top-margin">
@@ -635,14 +649,18 @@
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 
 	<script>
-		$('.carousel.carousel-slider').carousel({
-			full_width: true,
-			time_constant: 200,
-			indicators: true
+		$(document).ready(function() {
+			$('select').material_select();
+			$('.carousel.carousel-slider').carousel({
+				full_width: true,
+				time_constant: 200,
+				indicators: true
+			});
+			setInterval(function() {
+				$('.carousel').carousel('next');
+			}, 6666);
+
 		});
-		setInterval(function() {
-			$('.carousel').carousel('next');
-		}, 6666);
 	</script>
 
 </body>
