@@ -173,7 +173,12 @@
 			margin-bottom: 1rem;
 		}
 
-		.collection-item {
+		.collection .content-area {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.collection .content {
 			line-height: 2rem!important;
 		}
 
@@ -235,6 +240,62 @@
 
 		.bottom-left-divider a {
 			padding: 0 20px;
+		}
+
+		.article-cover-comment::before {
+			border: 10px solid transparent;
+			border-bottom-color: rgba(0, 0, 0, 0.15);
+			position: absolute;
+			display: inline-block;
+			content: "";
+			top: -20px;
+			/*right: 9px;*/
+			left: 170px;
+		}
+
+		.article-cover-comment::after {
+			border: 9px solid transparent;
+			border-bottom-color: #fff;
+			position: absolute;
+			display: inline-block;
+			content: "";
+			top: -18px;
+			/*right: 9px;*/
+			left: 171px;
+		}
+
+		.article-cover-comment {
+			width: 100%;
+			/*height: 100px;*/
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			position: relative;
+			left: 0;
+			z-index: 100;
+			padding: 0 15px;
+			background-clip: padding-box;
+			border-radius: 2px;
+			margin-top: 8px;
+		}
+
+		.article-cover-comment .circle {
+			width: 36px!important;
+			height: 36px!important;
+		}
+
+		.article-cover-comment .collection-item {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+		}
+
+		.article-cover-comment .article-cover-buttons {
+			margin-top: 5px;
+		}
+
+		.article-cover-comment input {
+			margin-bottom: 10px;
+		}
+
+		.article-cover-comment .input-field {
+			margin-top: 10px;
 		}
 	</style>
 </head>
@@ -349,13 +410,13 @@
 									<p class="grey-text">
 										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
 									</p>
-									<div class="row no-tb-margin">
+									<div class="row content-area">
 										<div class="col s4">
 											<div class="article-cover-image-container">
 												<img src="img/cat.png" class="article-cover-image">
 											</div>
 										</div>
-										<div class="col s8 title grey-text text-darken-4">
+										<div class="col s8 content grey-text text-darken-4">
 											现在有一种GPS 很好的 只有火柴盒大小 很管用的，不用外接电源，像手机一样充电你可以隐藏在坐垫底下，
 											<br> 用手机或上网都可以随时查到车的位置，
 											<br> 价格也不贵200元左右淘宝上就有，
@@ -398,13 +459,13 @@
 									<p class="grey-text">
 										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
 									</p>
-									<div class="row no-tb-margin">
+									<div class="row content-area">
 										<div class="col s4">
 											<div class="article-cover-image-container">
 												<img src="img/cat.png" class="article-cover-image">
 											</div>
 										</div>
-										<div class="col s8 title grey-text text-darken-4">
+										<div class="col s8 content grey-text text-darken-4">
 											现在有一种GPS 很好的 只有火柴盒大小 很管用的，不用外接电源，像手机一样充电你可以隐藏在坐垫底下，
 											<br> 用手机或上网都可以随时查到车的位置，
 											<br> 价格也不贵200元左右淘宝上就有，
@@ -422,6 +483,64 @@
 										<a class="grey-text text-lighten-1"><i class="material-icons">share</i>分享(3)</a>
 										<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
 										<a class="grey-text text-lighten-1"><i class="material-icons">report_problem</i>举报</a>
+									</div>
+									<div class="article-cover-comment">
+										<!-- 评论区 -->
+										<div class="collection">
+											<div class="collection-item avatar">
+												<div class="right grey-text text-lighten-1 font-small-2">
+													两天前
+												</div>
+												<img src="img/avatar2.gif" alt="" class="circle">
+												<span class="title">宝宝</span>
+												<p class="grey-text">
+													大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。这里是一个回复框的例子。
+												</p>
+												<div class="article-cover-buttons">
+													<a class="grey-text text-lighten-1"><i class="material-icons">reply</i>回复</a>
+													<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+													<a class="grey-text text-lighten-1"><i class="material-icons">report_problem</i>举报</a>
+												</div>
+												<div class="input-field">
+													<input type="text" placeholder="已开启预审评论，评论由机构筛选后公开。">
+												</div>
+												<div class="row no-b-margin">
+													<div class="col s12">
+														<div class="right-align">
+															<a class="waves-effect btn-flat grey-text">取消</a>
+															<a class="waves-effect btn-flat white-text deep-purple lighten-3">回复</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="collection-item avatar">
+												<div class="right grey-text text-lighten-1 font-small-2">
+													九天前
+												</div>
+												<img src="img/avatar2.gif" alt="" class="circle">
+												<span class="title">SHUHD</span>
+												<p class="grey-text">
+													Chandler的房间应该更有趣一些，比如有个台球桌。Monica的房间有点点乱。Joey的房间有些看上去太安静了，他的赤子之心要更活泼一些。
+												</p>
+												<div class="article-cover-buttons">
+													<a class="grey-text text-lighten-1"><i class="material-icons">reply</i>回复</a>
+													<span class="grey-text text-lighten-1">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+													<a class="grey-text text-lighten-1"><i class="material-icons">report_problem</i>举报</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="input-field">
+											<input type="text" placeholder="写下你的评论">
+										</div>
+										<div class="row">
+											<div class="col s12">
+												<div class="right-align">
+													<a class="waves-effect btn-flat grey-text">取消</a>
+													<a class="waves-effect btn-flat white-text deep-purple lighten-3">评论</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -451,19 +570,19 @@
 							<div class="collection">
 								<!-- @bug: 屏幕窄的时候字数太多就超出去了 -->
 								<a class="collection-item avatar">
-									<img src="img/excited.jpeg" alt="" class="circle">
+									<img src="img/avatar2.gif" alt="" class="circle">
 									<b class="title deep-purple-text text-lighten-2">宝宝</b>
 									<p class="grey-text">做一个有创意的吃货。</p>
 									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
 								</a>
 								<a class="collection-item avatar">
-									<img src="img/excited.jpeg" alt="" class="circle">
+									<img src="img/avatar2.gif" alt="" class="circle">
 									<b class="title deep-purple-text text-lighten-2">宝宝</b>
 									<p class="grey-text">做第二个有创意的吃货。</p>
 									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
 								</a>
 								<a class="collection-item avatar">
-									<img src="img/excited.jpeg" alt="" class="circle">
+									<img src="img/avatar2.gif" alt="" class="circle">
 									<b class="title deep-purple-text text-lighten-2">宝宝</b>
 									<p class="grey-text">做第三个有创意的吃货。</p>
 									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
@@ -499,7 +618,7 @@
 												<img height=32px src="img/rank1.png">
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>宝宝</td>
 											<td>111</td>
@@ -510,7 +629,7 @@
 												<img height=32px src="img/rank2.png">
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>傻萌萌</td>
 											<td>90</td>
@@ -521,7 +640,7 @@
 												<img height=32px src="img/rank3.png">
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>SHUHD</td>
 											<td>80</td>
@@ -532,7 +651,7 @@
 												4
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>人们的儿...</td>
 											<td>60</td>
@@ -543,7 +662,7 @@
 												5
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>董小姐</td>
 											<td>55</td>
@@ -582,7 +701,7 @@
 												<img height=32px src="img/rank1.png">
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>宝宝</td>
 											<td>111</td>
@@ -593,7 +712,7 @@
 												<img height=32px src="img/rank2.png">
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>傻萌萌</td>
 											<td>90</td>
@@ -604,7 +723,7 @@
 												<img height=32px src="img/rank3.png">
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>SHUHD</td>
 											<td>80</td>
@@ -615,7 +734,7 @@
 												4
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>人们的儿...</td>
 											<td>60</td>
@@ -626,7 +745,7 @@
 												5
 											</td>
 											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												<img height=36px class="circle hide-on-med-and-down" src="img/avatar2.gif">
 											</td>
 											<td>董小姐</td>
 											<td>55</td>
