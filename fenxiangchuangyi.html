@@ -323,6 +323,24 @@
 						<li><a>资讯中心</a></li>
 					</ul>
 				</div>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a class="dropdown-button dropdown-click grey-text" data-activates="dropdown_nav">
+							<div style="float:left;margin-right:1rem;">
+								<img class="circle" src="img/avatar2.gif" style="height:40px; margin-top:12px;">
+							</div>
+							七七
+							<i class="material-icons right">expand_more</i>
+						</a>
+					</li>
+					<li><a class="grey-text">签到</a></li>
+				</ul>
+				<ul id="dropdown_nav" class="dropdown-content">
+					<li><a>个人主页</a></li>
+					<li><a>兑换奖励</a></li>
+					<li><a>设置</a></li>
+					<li><a>退出</a></li>
+				</ul>
 			</div>
 		</nav>
 	</div>
@@ -353,9 +371,15 @@
 									</div>
 									<div class="col s5" style="padding:0 8%;">
 										<div class="input-field">
-											<div class="waves-effect waves-light btn btn-flat deep-purple lighten-2 white-text" style="width:100%;">
+											<a data-activates='dropdown_submit' class="dropdown-button dropdown-hover waves-effect waves-light btn btn-flat deep-purple lighten-2 white-text" style="width:100%;">
 												<i class="material-icons right">expand_more</i> 发布
-											</div>
+											</a>
+											<ul id='dropdown_submit' class='dropdown-content'>
+												<li><a>发布创意</a></li>
+												<li><a>创意种子大赛</a></li>
+												<li><a>能源创客</a></li>
+												<li><a>其他比赛</a></li>
+											</ul>
 										</div>
 										<!-- <div class="input-field">
 											<select style="text-align:center;">
@@ -778,7 +802,18 @@
 			setInterval(function() {
 				$('.carousel').carousel('next');
 			}, 6666);
-
+			$('.dropdown-button.dropdown-hover').dropdown({
+				hover: true, // Activate on hover
+				gutter: 0, // Spacing from edge
+				belowOrigin: true, // Displays dropdown below the button
+				alignment: 'left' // Displays dropdown with edge aligned to the left of button
+			});
+			$('.dropdown-button.dropdown-click').dropdown({
+				hover: false, // Activate on hover
+				gutter: 0, // Spacing from edge
+				belowOrigin: true, // Displays dropdown below the button
+				alignment: 'left' // Displays dropdown with edge aligned to the left of button
+			});
 		});
 	</script>
 
