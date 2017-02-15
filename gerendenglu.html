@@ -195,6 +195,9 @@
 			width: initial;
 			/*注意: 这个图片不能太窄，宽度必须多留出来一点*/
 		}
+		.carousel-item {
+			overflow: hidden;
+		}
 	</style>
 </head>
 
@@ -724,9 +727,15 @@
 			time_constant: 200,
 			indicators: true
 		});
-		setInterval(function() {
+		var timer = setInterval(function() {
 			$('.carousel').carousel('next');
 		}, 6666);
+		$('.indicator-item').click(function() {
+			clearTimeout(timer);
+			timer = setInterval(function() {
+				$('.carousel').carousel('next');
+			}, 6666);
+		});
 	</script>
 
 </body>
