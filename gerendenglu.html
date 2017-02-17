@@ -195,8 +195,41 @@
 			width: initial;
 			/*注意: 这个图片不能太窄，宽度必须多留出来一点*/
 		}
+
 		.carousel-item {
 			overflow: hidden;
+		}
+
+		.collection.bottom-left-item {
+			padding-left: 12px;
+		}
+
+		.h-points {
+			position: absolute;
+			height: 28px;
+			left: -3px;
+			top: 2px;
+			opacity: 0;
+		}
+
+		.v-points-container {
+			width: 100%;
+			text-align: center;
+		}
+
+		.v-points {
+			opacity: 0;
+			width: 28px;
+		}
+
+		.v-points,
+		.h-points {
+			transition: .2s ease-out;
+		}
+
+		.bottom-left-item:hover .h-points,
+		.bottom-left-item:hover .v-points {
+			opacity: 1;
 		}
 	</style>
 </head>
@@ -294,16 +327,27 @@
 										<div class="input-field no-margin">
 											<input placeholder="请输入您的密码" id="first_name" type="password" class="validate">
 										</div>
-										<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
+										<div class="row no-b-margin">
+											<div class="col s6">
+												<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">申请</a>
+											</div>
+											<div class="col s6">
+												<a id="login-button" class="col s6 waves-effect btn white grey-text text-darken-1">登录</a>
+											</div>
+											<!-- 个人的话，就把上面两个注释掉，保留下边的 -->
+											<!-- <div class="col s12">
+												<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
+											</div> -->
+										</div>
 									</div>
-								</div>
-								<div class="row no-margin">
-									<div class="col s7">
-										<input type="checkbox" id="remember_password" />
-										<label for="remember_password">记住我</label>
-									</div>
-									<div class="col s5 right-align">
-										<a class="deep-purple-text text-lighten-2">忘记密码</a>
+									<div class="row no-margin">
+										<div class="col s7">
+											<input type="checkbox" id="remember_password" />
+											<label for="remember_password">记住我</label>
+										</div>
+										<div class="col s5 right-align">
+											<a class="deep-purple-text text-lighten-2">忘记密码</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -311,409 +355,419 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- content -->
-		<div class="container">
-			<div class="row">
-				<div class="col s8">
-					<div id="bottom-left">
-						<!-- 左下方区域 -->
-						<div class="section bottom-left-section">
-							<div id="bottom-left-text-tag">热点资讯</div>
-							<!-- 下面是一个item，从这里开始 -->
-							<div class="collection bottom-left-item">
-								<div class="row no-b-margin top-margin">
-									<div class="col s6">
-										<div class="bottom-left-item-label font-small-1">
-											<span class="grey-text text-darken-3">创意领域</span>
-											<span class="grey-text left-margin">生活</span>
+			<!-- content -->
+			<div class="container">
+				<div class="row">
+					<div class="col s8">
+						<div id="bottom-left">
+							<!-- 左下方区域 -->
+							<div class="section bottom-left-section">
+								<div id="bottom-left-text-tag">热点资讯</div>
+								<!-- 下面是一个item，从这里开始 -->
+								<div class="collection bottom-left-item">
+									<div class="row no-b-margin top-margin">
+										<div class="col s6">
+											<div class="bottom-left-item-label font-small-1">
+												<span class="grey-text text-darken-3">创意领域</span>
+												<span class="grey-text left-margin">生活</span>
+											</div>
+										</div>
+										<div class="col s6 right-align">
+											<div class="bottom-left-item-time grey-text font-small-2">
+												发布于2017-01-17 22:22
+											</div>
 										</div>
 									</div>
-									<div class="col s6 right-align">
-										<div class="bottom-left-item-time grey-text font-small-2">
-											发布于2017-01-17 22:22
-										</div>
-									</div>
-								</div>
-								<div class="collection-item avatar no-background">
-									<img src="img/tmp3.png" alt="" class="circle">
-									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
-									<p class="grey-text">
-										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
-									</p>
-								</div>
-							</div>
-							<!-- 到这里结束 -->
-							<!-- 下面是一个item，从这里开始 -->
-							<div class="collection bottom-left-item">
-								<div class="row no-b-margin top-margin">
-									<div class="col s6">
-										<div class="bottom-left-item-label font-small-1">
-											<span class="grey-text text-darken-3">创意领域</span>
-											<span class="grey-text left-margin">生活</span>
-										</div>
-									</div>
-									<div class="col s6 right-align">
-										<div class="bottom-left-item-time grey-text font-small-2">
-											发布于2017-01-17 22:22
-										</div>
-									</div>
-								</div>
-								<div class="collection-item avatar no-background">
-									<img src="img/tmp3.png" alt="" class="circle">
-									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
-									<p class="grey-text">
-										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
-									</p>
-								</div>
-							</div>
-							<!-- 到这里结束 -->
-							<!-- 下面是一个item，从这里开始 -->
-							<div class="collection bottom-left-item">
-								<div class="row no-b-margin top-margin">
-									<div class="col s6">
-										<div class="bottom-left-item-label font-small-1">
-											<span class="grey-text text-darken-3">创意领域</span>
-											<span class="grey-text left-margin">生活</span>
-										</div>
-									</div>
-									<div class="col s6 right-align">
-										<div class="bottom-left-item-time grey-text font-small-2">
-											发布于2017-01-17 22:22
-										</div>
-									</div>
-								</div>
-								<div class="collection-item avatar no-background">
-									<img src="img/tmp3.png" alt="" class="circle">
-									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
-									<p class="grey-text">
-										大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
-									</p>
-								</div>
-							</div>
-							<!-- 到这里结束 -->
-						</div>
-						<div class="section bottom-left-section">
-							<div id="bottom-left-text-tag">团队动态</div>
-							<!-- 下面是一个item，从这里开始 -->
-							<div class="collection bottom-left-item">
-								<div class="row no-b-margin top-margin">
-									<div class="col s6">
-										<div class="bottom-left-item-label font-small-1">
-											<span class="grey-text text-darken-3">团队领域</span>
-											<span class="grey-text left-margin">视频娱乐</span>
-										</div>
-									</div>
-									<div class="col s6 right-align">
-										<div class="bottom-left-item-time grey-text font-small-2">
-											发布于2017-01-17 22:22
-										</div>
-									</div>
-								</div>
-								<div class="collection-item avatar no-background">
-									<img src="img/tmp3.png" alt="" class="circle">
-									<b class="title grey-text text-darken-4">状态标题</b>
-									<p class="grey-text">
-										状态内容
-									</p>
-								</div>
-							</div>
-							<!-- 到这里结束 -->
-							<!-- 下面是一个item，从这里开始 -->
-							<div class="collection bottom-left-item">
-								<div class="row no-b-margin top-margin">
-									<div class="col s6">
-										<div class="bottom-left-item-label font-small-1">
-											<span class="grey-text text-darken-3">团队领域</span>
-											<span class="grey-text left-margin">视频娱乐</span>
-										</div>
-									</div>
-									<div class="col s6 right-align">
-										<div class="bottom-left-item-time grey-text font-small-2">
-											发布于2017-01-17 22:22
-										</div>
-									</div>
-								</div>
-								<div class="collection-item avatar no-background">
-									<img src="img/tmp3.png" alt="" class="circle">
-									<b class="title grey-text text-darken-4">状态标题</b>
-									<p class="grey-text">
-										状态内容
-									</p>
-								</div>
-							</div>
-							<!-- 到这里结束 -->
-							<!-- 下面是一个item，从这里开始 -->
-							<div class="collection bottom-left-item">
-								<div class="row no-b-margin top-margin">
-									<div class="col s6">
-										<div class="bottom-left-item-label font-small-1">
-											<span class="grey-text text-darken-3">团队领域</span>
-											<span class="grey-text left-margin">视频娱乐</span>
-										</div>
-									</div>
-									<div class="col s6 right-align">
-										<div class="bottom-left-item-time grey-text font-small-2">
-											发布于2017-01-17 22:22
-										</div>
-									</div>
-								</div>
-								<div class="collection-item avatar no-background">
-									<img src="img/tmp3.png" alt="" class="circle">
-									<b class="title grey-text text-darken-4">状态标题</b>
-									<p class="grey-text">
-										状态内容
-									</p>
-								</div>
-							</div>
-							<!-- 到这里结束 -->
-						</div>
-						<div class="section bottom-left-section">
-							<div id="bottom-left-text-tag">热点资讯</div>
-							<div class="row">
-								<div class="col s4">
-									<div class="bottom-left-item bottom-left-3col-item">
-										<img width=100% src="img/tmp2.png">
-										<p class="title grey-text text-darken-3"><b>智能找车——自行车安装定位系统</b></p>
+									<div class="collection-item avatar no-background">
+										<img src="img/points1.png" class="h-points">
+										<img src="img/tmp3.png" alt="" class="circle">
+										<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
 										<p class="grey-text">
 											大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
 										</p>
 									</div>
 								</div>
-								<div class="col s4">
-									<div class="bottom-left-item bottom-left-3col-item">
-										<img width=100% src="img/tmp2.png">
-										<p class="title grey-text text-darken-3"><b>智能找车——自行车安装定位系统</b></p>
+								<!-- 到这里结束 -->
+								<!-- 下面是一个item，从这里开始 -->
+								<div class="collection bottom-left-item">
+									<div class="row no-b-margin top-margin">
+										<div class="col s6">
+											<div class="bottom-left-item-label font-small-1">
+												<span class="grey-text text-darken-3">创意领域</span>
+												<span class="grey-text left-margin">生活</span>
+											</div>
+										</div>
+										<div class="col s6 right-align">
+											<div class="bottom-left-item-time grey-text font-small-2">
+												发布于2017-01-17 22:22
+											</div>
+										</div>
+									</div>
+									<div class="collection-item avatar no-background">
+										<img src="img/points1.png" class="h-points">
+										<img src="img/tmp3.png" alt="" class="circle">
+										<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
 										<p class="grey-text">
 											大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
 										</p>
 									</div>
 								</div>
-								<div class="col s4">
-									<div class="bottom-left-item bottom-left-3col-item">
-										<img width=100% src="img/tmp2.png">
-										<p class="title grey-text text-darken-3"><b>智能找车——自行车安装定位系统</b></p>
+								<!-- 到这里结束 -->
+								<!-- 下面是一个item，从这里开始 -->
+								<div class="collection bottom-left-item">
+									<div class="row no-b-margin top-margin">
+										<div class="col s6">
+											<div class="bottom-left-item-label font-small-1">
+												<span class="grey-text text-darken-3">创意领域</span>
+												<span class="grey-text left-margin">生活</span>
+											</div>
+										</div>
+										<div class="col s6 right-align">
+											<div class="bottom-left-item-time grey-text font-small-2">
+												发布于2017-01-17 22:22
+											</div>
+										</div>
+									</div>
+									<div class="collection-item avatar no-background">
+										<img src="img/tmp3.png" alt="" class="circle">
+										<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
 										<p class="grey-text">
 											大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
 										</p>
+									</div>
+								</div>
+								<!-- 到这里结束 -->
+							</div>
+							<div class="section bottom-left-section">
+								<div id="bottom-left-text-tag">团队动态</div>
+								<!-- 下面是一个item，从这里开始 -->
+								<div class="collection bottom-left-item">
+									<div class="row no-b-margin top-margin">
+										<div class="col s6">
+											<div class="bottom-left-item-label font-small-1">
+												<span class="grey-text text-darken-3">团队领域</span>
+												<span class="grey-text left-margin">视频娱乐</span>
+											</div>
+										</div>
+										<div class="col s6 right-align">
+											<div class="bottom-left-item-time grey-text font-small-2">
+												发布于2017-01-17 22:22
+											</div>
+										</div>
+									</div>
+									<div class="collection-item avatar no-background">
+										<img src="img/tmp3.png" alt="" class="circle">
+										<b class="title grey-text text-darken-4">状态标题</b>
+										<p class="grey-text">
+											状态内容
+										</p>
+									</div>
+								</div>
+								<!-- 到这里结束 -->
+								<!-- 下面是一个item，从这里开始 -->
+								<div class="collection bottom-left-item">
+									<div class="row no-b-margin top-margin">
+										<div class="col s6">
+											<div class="bottom-left-item-label font-small-1">
+												<span class="grey-text text-darken-3">团队领域</span>
+												<span class="grey-text left-margin">视频娱乐</span>
+											</div>
+										</div>
+										<div class="col s6 right-align">
+											<div class="bottom-left-item-time grey-text font-small-2">
+												发布于2017-01-17 22:22
+											</div>
+										</div>
+									</div>
+									<div class="collection-item avatar no-background">
+										<img src="img/tmp3.png" alt="" class="circle">
+										<b class="title grey-text text-darken-4">状态标题</b>
+										<p class="grey-text">
+											状态内容
+										</p>
+									</div>
+								</div>
+								<!-- 到这里结束 -->
+								<!-- 下面是一个item，从这里开始 -->
+								<div class="collection bottom-left-item">
+									<div class="row no-b-margin top-margin">
+										<div class="col s6">
+											<div class="bottom-left-item-label font-small-1">
+												<span class="grey-text text-darken-3">团队领域</span>
+												<span class="grey-text left-margin">视频娱乐</span>
+											</div>
+										</div>
+										<div class="col s6 right-align">
+											<div class="bottom-left-item-time grey-text font-small-2">
+												发布于2017-01-17 22:22
+											</div>
+										</div>
+									</div>
+									<div class="collection-item avatar no-background">
+										<img src="img/tmp3.png" alt="" class="circle">
+										<b class="title grey-text text-darken-4">状态标题</b>
+										<p class="grey-text">
+											状态内容
+										</p>
+									</div>
+								</div>
+								<!-- 到这里结束 -->
+							</div>
+							<div class="section bottom-left-section">
+								<div id="bottom-left-text-tag">热点资讯</div>
+								<div class="row">
+									<div class="col s4">
+										<div class="bottom-left-item bottom-left-3col-item">
+											<img width=100% src="img/tmp2.png">
+											<p class="title grey-text text-darken-3"><b>智能找车——自行车安装定位系统</b></p>
+											<p class="grey-text">
+												大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
+											</p>
+											<div class="v-points-container">
+												<img src="img/points2.png" class="v-points">
+											</div>
+										</div>
+									</div>
+									<div class="col s4">
+										<div class="bottom-left-item bottom-left-3col-item">
+											<img width=100% src="img/tmp2.png">
+											<p class="title grey-text text-darken-3"><b>智能找车——自行车安装定位系统</b></p>
+											<p class="grey-text">
+												大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
+											</p>
+											<div class="v-points-container">
+												<img src="img/points2.png" class="v-points">
+											</div>
+										</div>
+									</div>
+									<div class="col s4">
+										<div class="bottom-left-item bottom-left-3col-item">
+											<img width=100% src="img/tmp2.png">
+											<p class="title grey-text text-darken-3"><b>智能找车——自行车安装定位系统</b></p>
+											<p class="grey-text">
+												大清的自行车太多了，常常找不到自己的自行车，可以安装定位系统帮助自行车。
+											</p>
+											<div class="v-points-container">
+												<img src="img/points2.png" class="v-points">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col s4">
-					<div id="bottom-right" class="card-panel big-shadow">
-						<div id="bottom-right-circle-button">
-							<a class="btn-floating btn-large waves-effect waves-light deep-purple lighten-2"><i class="material-icons">email</i></a>
-						</div>
-						<div class="row no-lr-margin">
-							<div class="col s12">
-								<img src="img/tmp2.png" width=100% class="border-radius-5">
+					<div class="col s4">
+						<div id="bottom-right" class="card-panel big-shadow">
+							<div id="bottom-right-circle-button">
+								<a class="btn-floating btn-large waves-effect waves-light deep-purple lighten-2"><i class="material-icons">email</i></a>
 							</div>
-						</div>
-						<div class="row no-margin bottom-line">
-							<div class="col s6 left-align grey-text text-darken-2">
-								<b>推荐关注</b>
+							<div class="row no-lr-margin">
+								<div class="col s12">
+									<img src="img/tmp2.png" width=100% class="border-radius-5">
+								</div>
 							</div>
-							<div class="col s6 right-align">
-								<a class="deep-purple-text text-lighten-4" style="font-size:12px;">换一批</a>
+							<div class="row no-margin bottom-line">
+								<div class="col s6 left-align grey-text text-darken-2">
+									<b>推荐关注</b>
+								</div>
+								<div class="col s6 right-align">
+									<a class="deep-purple-text text-lighten-4" style="font-size:12px;">换一批</a>
+								</div>
 							</div>
-						</div>
-						<div class="row no-lr-margin">
-							<div class="collection">
-								<!-- @bug: 屏幕窄的时候字数太多就超出去了 -->
-								<a class="collection-item avatar">
-									<img src="img/excited.jpeg" alt="" class="circle">
-									<b class="title deep-purple-text text-lighten-2">宝宝</b>
-									<p class="grey-text">做一个有创意的吃货。</p>
-									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
-								</a>
-								<a class="collection-item avatar">
-									<img src="img/excited.jpeg" alt="" class="circle">
-									<b class="title deep-purple-text text-lighten-2">宝宝</b>
-									<p class="grey-text">做第二个有创意的吃货。</p>
-									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
-								</a>
-								<a class="collection-item avatar">
-									<img src="img/excited.jpeg" alt="" class="circle">
-									<b class="title deep-purple-text text-lighten-2">宝宝</b>
-									<p class="grey-text">做第三个有创意的吃货。</p>
-									<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
-								</a>
+							<div class="row no-lr-margin">
+								<div class="collection">
+									<!-- @bug: 屏幕窄的时候字数太多就超出去了 -->
+									<a class="collection-item avatar">
+										<img src="img/excited.jpeg" alt="" class="circle">
+										<b class="title deep-purple-text text-lighten-2">宝宝</b>
+										<p class="grey-text">做一个有创意的吃货。</p>
+										<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
+									</a>
+									<a class="collection-item avatar">
+										<img src="img/excited.jpeg" alt="" class="circle">
+										<b class="title deep-purple-text text-lighten-2">宝宝</b>
+										<p class="grey-text">做第二个有创意的吃货。</p>
+										<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
+									</a>
+									<a class="collection-item avatar">
+										<img src="img/excited.jpeg" alt="" class="circle">
+										<b class="title deep-purple-text text-lighten-2">宝宝</b>
+										<p class="grey-text">做第三个有创意的吃货。</p>
+										<div class="secondary-content waves-effect waves-light btn deep-purple lighten-2">加关注</div>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="row no-margin bottom-line">
-							<div class="col s6 left-align grey-text text-darken-2">
-								<b>创意达人</b>
+							<div class="row no-margin bottom-line">
+								<div class="col s6 left-align grey-text text-darken-2">
+									<b>创意达人</b>
+								</div>
+								<div class="col s6 right-align">
+									<a class="deep-purple-text text-lighten-4" style="font-size:12px;">本周</a>
+									<span class="grey-text text-lighten-1" style="font-size:12px;">•</span>
+									<a class="grey-text text-darken-1" style="font-size:12px;">本月</a>
+								</div>
 							</div>
-							<div class="col s6 right-align">
-								<a class="deep-purple-text text-lighten-4" style="font-size:12px;">本周</a>
-								<span class="grey-text text-lighten-1" style="font-size:12px;">•</span>
-								<a class="grey-text text-darken-1" style="font-size:12px;">本月</a>
-							</div>
-						</div>
-						<div class="row no-lr-margin">
-							<div class="col s12">
-								<table class="highlight centered no-padding-table top-margin">
-									<thead>
-										<tr>
-											<!-- 排名使用两列 -->
-											<th data-field="rank" colspan="2" style="width: 1%;">排名</th>
-											<th data-field="name">昵称</th>
-											<th data-field="like">点赞数</th>
-											<th data-field="score">积分</th>
-										</tr>
-									</thead>
+							<div class="row no-lr-margin">
+								<div class="col s12">
+									<table class="highlight centered no-padding-table top-margin">
+										<thead>
+											<tr>
+												<!-- 排名使用两列 -->
+												<th data-field="rank" colspan="2" style="width: 1%;">排名</th>
+												<th data-field="name">昵称</th>
+												<th data-field="like">点赞数</th>
+												<th data-field="score">积分</th>
+											</tr>
+										</thead>
 
-									<tbody>
-										<tr>
-											<td>
-												<img height=32px src="img/rank1.png">
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>宝宝</td>
-											<td>111</td>
-											<td>600</td>
-										</tr>
-										<tr>
-											<td>
-												<img height=32px src="img/rank2.png">
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>傻萌萌</td>
-											<td>90</td>
-											<td>500</td>
-										</tr>
-										<tr>
-											<td>
-												<img height=32px src="img/rank3.png">
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>SHUHD</td>
-											<td>80</td>
-											<td>444</td>
-										</tr>
-										<tr>
-											<td>
-												4
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>人们的儿...</td>
-											<td>60</td>
-											<td>345</td>
-										</tr>
-										<tr>
-											<td>
-												5
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>董小姐</td>
-											<td>55</td>
-											<td>233</td>
-										</tr>
-									</tbody>
-								</table>
+										<tbody>
+											<tr>
+												<td>
+													<img height=32px src="img/rank1.png">
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>宝宝</td>
+												<td>111</td>
+												<td>600</td>
+											</tr>
+											<tr>
+												<td>
+													<img height=32px src="img/rank2.png">
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>傻萌萌</td>
+												<td>90</td>
+												<td>500</td>
+											</tr>
+											<tr>
+												<td>
+													<img height=32px src="img/rank3.png">
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>SHUHD</td>
+												<td>80</td>
+												<td>444</td>
+											</tr>
+											<tr>
+												<td>
+													4
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>人们的儿...</td>
+												<td>60</td>
+												<td>345</td>
+											</tr>
+											<tr>
+												<td>
+													5
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>董小姐</td>
+												<td>55</td>
+												<td>233</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-						<div class="row no-margin bottom-line">
-							<div class="col s6 left-align grey-text text-darken-2">
-								<b>意见领袖</b>
+							<div class="row no-margin bottom-line">
+								<div class="col s6 left-align grey-text text-darken-2">
+									<b>意见领袖</b>
+								</div>
+								<div class="col s6 right-align">
+									<a class="deep-purple-text text-lighten-4" style="font-size:12px;">本周</a>
+									<span class="grey-text text-lighten-1" style="font-size:12px;">•</span>
+									<a class="grey-text text-darken-1" style="font-size:12px;">本月</a>
+								</div>
 							</div>
-							<div class="col s6 right-align">
-								<a class="deep-purple-text text-lighten-4" style="font-size:12px;">本周</a>
-								<span class="grey-text text-lighten-1" style="font-size:12px;">•</span>
-								<a class="grey-text text-darken-1" style="font-size:12px;">本月</a>
-							</div>
-						</div>
-						<div class="row no-lr-margin">
-							<div class="col s12">
-								<table class="highlight centered no-padding-table top-margin">
-									<thead>
-										<tr>
-											<!-- 排名使用两列 -->
-											<th data-field="rank" colspan="2" style="width: 1%;">排名</th>
-											<th data-field="name">昵称</th>
-											<th data-field="like">点赞数</th>
-											<th data-field="score">积分</th>
-										</tr>
-									</thead>
+							<div class="row no-lr-margin">
+								<div class="col s12">
+									<table class="highlight centered no-padding-table top-margin">
+										<thead>
+											<tr>
+												<!-- 排名使用两列 -->
+												<th data-field="rank" colspan="2" style="width: 1%;">排名</th>
+												<th data-field="name">昵称</th>
+												<th data-field="like">点赞数</th>
+												<th data-field="score">积分</th>
+											</tr>
+										</thead>
 
-									<tbody>
-										<tr>
-											<td>
-												<img height=32px src="img/rank1.png">
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>宝宝</td>
-											<td>111</td>
-											<td>600</td>
-										</tr>
-										<tr>
-											<td>
-												<img height=32px src="img/rank2.png">
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>傻萌萌</td>
-											<td>90</td>
-											<td>500</td>
-										</tr>
-										<tr>
-											<td>
-												<img height=32px src="img/rank3.png">
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>SHUHD</td>
-											<td>80</td>
-											<td>444</td>
-										</tr>
-										<tr>
-											<td>
-												4
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>人们的儿...</td>
-											<td>60</td>
-											<td>345</td>
-										</tr>
-										<tr>
-											<td>
-												5
-											</td>
-											<td>
-												<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
-											</td>
-											<td>董小姐</td>
-											<td>55</td>
-											<td>233</td>
-										</tr>
-									</tbody>
-								</table>
+										<tbody>
+											<tr>
+												<td>
+													<img height=32px src="img/rank1.png">
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>宝宝</td>
+												<td>111</td>
+												<td>600</td>
+											</tr>
+											<tr>
+												<td>
+													<img height=32px src="img/rank2.png">
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>傻萌萌</td>
+												<td>90</td>
+												<td>500</td>
+											</tr>
+											<tr>
+												<td>
+													<img height=32px src="img/rank3.png">
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>SHUHD</td>
+												<td>80</td>
+												<td>444</td>
+											</tr>
+											<tr>
+												<td>
+													4
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>人们的儿...</td>
+												<td>60</td>
+												<td>345</td>
+											</tr>
+											<tr>
+												<td>
+													5
+												</td>
+												<td>
+													<img height=36px class="circle hide-on-med-and-down" src="img/excited.jpeg">
+												</td>
+												<td>董小姐</td>
+												<td>55</td>
+												<td>233</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
-
-		</div>
 
 	</main>
 
