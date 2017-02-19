@@ -311,6 +311,28 @@
 			margin-bottom: 10px;
 			width: 40px;
 		}
+
+		.collection.bottom-left-item {
+			padding-left: 12px;
+		}
+
+		.h-points {
+			position: absolute;
+			height: 28px;
+			left: -3px;
+			top: 100px;
+			opacity: 0;
+		}
+
+		.v-points,
+		.h-points {
+			transition: .2s ease-out;
+		}
+
+		.bottom-left-item:hover .h-points,
+		.bottom-left-item:hover .v-points {
+			opacity: 1;
+		}
 	</style>
 </head>
 
@@ -443,6 +465,7 @@
 									</div>
 								</div>
 								<div class="collection-item avatar no-background">
+									<img src="img/points1.png" class="h-points">
 									<img src="img/tmp3.png" alt="" class="circle">
 									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
 									<p class="grey-text">
@@ -492,6 +515,7 @@
 									</div>
 								</div>
 								<div class="collection-item avatar no-background">
+									<img src="img/points1.png" class="h-points">
 									<img src="img/tmp3.png" alt="" class="circle">
 									<b class="title grey-text text-darken-4">智能找车——自行车安装定位系统</b>
 									<p class="grey-text">
