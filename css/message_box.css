@@ -1,0 +1,231 @@
+#message-button {
+    z-index: 20000;
+    transition: .4s ease-out;
+}
+
+#message-button-close {
+    z-index: 10000;
+    opacity: 0;
+    transition: .4s ease-out;
+}
+
+#message-box {
+    display: none;
+    position: fixed;
+    width: 30%;
+    min-width: 320px;
+    max-width: 410px;
+    max-height: 560px;
+    height: 70%;
+    overflow-y: scroll;
+    right: 23px;
+    bottom: 95px;
+    background-color: white;
+    z-index: 30000;
+    /*box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.08), 0 4px 15px 0 rgba(0, 0, 0, 0.05);*/
+    border: 1px solid rgba(178, 159, 246, 0.5);
+    border-radius: 2px;
+}
+
+#message-box::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#message-box .tabs .tab a.active {
+    background-color: #6f70b1;
+    color: white;
+}
+
+#message-box .tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#message-box .indicator {
+    display: none;
+}
+
+#message-box .badge {
+    position: absolute;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #6f70b1;
+    border-radius: 50%;
+    transform: scale(0.3);
+    font-size: 2rem;
+}
+
+#message-box .tab .active .badge {
+    color: #6f70b1;
+    background-color: white;
+}
+
+#message-box a {
+    color: #7273b2;
+}
+
+#message-box .time {
+    color: #909090;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+#message-box .title {
+    color: #5c5c5c;
+    font-size: 13px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+#message-box .content {
+    font-size: 12px;
+    color: #909090;
+    padding-left: 30px;
+    line-height: 30px;
+}
+
+#message-box .reply {
+    color: #7273b2;
+    font-size: 12px;
+    text-align: right;
+}
+
+#message-box .clear-button {
+    text-decoration: underline;
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 12px;
+}
+
+#message-box li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#message-box .circle {
+    width: 42px;
+    height: 42px;
+}
+
+#message-box .letter-item {
+    padding-left: 52px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+#message-box .letter-content {
+    font-size: 12px;
+    color: #909090;
+}
+
+#message-box .avatar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#message-box .letter-reply {
+	display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+#message-box .letter-reply .top-bar {
+    height: 48px;
+    background-color: #6f70b1;
+    width: 100%;
+    color: white;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3), 0 0px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+#message-box .letter-reply .return {
+    line-height: 48px;
+	color: white;
+}
+
+#message-box .letter-reply .letter-title-avatar {
+    margin-top: 6px;
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin-right: 1rem
+}
+
+#message-box .letter-reply .name-container {
+    position: absolute;
+    left: 50%;
+}
+
+#message-box .letter-reply .name-container>div {
+    margin-left: -50%;
+}
+
+#message-box .letter-reply .name {
+    line-height: 48px;
+    float: left;
+}
+
+#message-box .letter-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#message-box .letter-reply input {
+    height: 36px;
+}
+
+#message-box .letter-content {
+	overflow-y: scroll;
+	height: calc(100% - 104px);
+}
+
+#message-box .letter-content::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#message-box .letter-content .time {
+	text-align: center;
+	margin-left: 50%;
+	float: left;
+}
+
+#message-box .letter-content .time>div {
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	color:white;
+	margin-left: -100%;
+}
+
+#message-box .letter-content .circle {
+
+}
+
+#message-box .letter-content .row {
+	margin-bottom: 10px;
+}
+
+#message-box .letter-content .chat-box {
+	background-color: #eeeeee;
+	color: #969696;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+#message-box .letter-content .chat-box-left {
+	float: left;
+}
+
+#message-box .letter-content .chat-box-right {
+	float: right;
+}
