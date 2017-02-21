@@ -113,3 +113,7 @@ a {
     box-shadow: inherit;
     margin: 7.5px 5px 7.5px 0;
 }
+
+.navbar-fixed {
+    z-index: 500000;
+}

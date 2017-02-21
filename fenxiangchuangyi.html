@@ -431,7 +431,47 @@
 			padding-top: 1px;
 		}
 
+		#publish-box {
+			position: absolute;
+			top: 80px;
+			width: 60%;
+			left: 20%;
+			z-index: 1000;
+			display: none;
+		}
 
+		.form-title {
+			/*line-height: 45px;*/
+			margin-top: 12px;
+		}
+
+		.upload-box {
+			border: 1px solid rgba(180, 157, 249, 0.5)!important;
+			border-radius: 3px;
+			height: 150px;
+			width: 100%;
+		}
+
+		i.left {
+			margin-right: 0;
+		}
+
+		.btn-min-width {
+			min-width: 145px;
+		}
+
+		textarea {
+			margin-bottom: 0!important;
+		}
+
+		.file-path-wrapper {
+			padding-left: 0!important;
+		}
+
+		.file-field .btn {
+			height: 36px;
+			line-height: 36px;
+		}
 	</style>
 </head>
 
@@ -510,9 +550,9 @@
 												<i class="material-icons right">expand_more</i> 发布
 											</a>
 											<ul id='dropdown_submit' class='dropdown-content'>
-												<li><a>发布创意</a></li>
+												<li><a id="publish-creation">发布创意</a></li>
 												<li><a>创意种子大赛</a></li>
-												<li><a>能源创客</a></li>
+												<li><a id="publish-energy">能源创客</a></li>
 												<li><a>其他比赛</a></li>
 											</ul>
 										</div>
@@ -1119,6 +1159,167 @@
 		</div>
 	</div>
 
+	<div id="publish-box">
+		<div class="card-panel big-shadow" id="publish-energy-box">
+			<div class="row">
+				<div class="col s3 m2 right-align font-big-1 grey-text text-darken-4">
+					<b>能源创客</b>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意名称
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="请输入你的创意名称(20字以内)" id="" type="text" class="validate no-margin" length="20">
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					团队成员
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="请输入团队成员(不超过四人)" id="" type="text" class="validate no-margin">
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意关键词
+				</div>
+				<div class="col s8 m8">
+					<div class="chips chips-placeholder"></div>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意简介
+					<br>
+					<span class="text-lighten-1 grey-text">
+						(150字以内)
+					</span>
+				</div>
+				<div class="input-field col s6 m6 no-margin">
+					<textarea class="materialize-textarea no-margin" length="150"></textarea>
+				</div>
+				<div class="col s2 m2 no-margin">
+					<a class=" waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						<i class="material-icons left">file_upload</i>上传图片
+					</a>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					可行性分析
+					<br>
+					<span class="text-lighten-1 grey-text">
+						(150字以内)
+					</span>
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<textarea class="materialize-textarea " length="150"></textarea>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					参考文献或链接
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="" id="" type="text" class="validate no-margin">
+				</div>
+			</div>
+			<div class="file-field input-field row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意名称
+				</div>
+				<div class="col s6 m6 no-margin">
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+				<div class="col s2 m2 no-margin">
+					<a class="waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						<i class="material-icons left">file_upload</i><span>上传视频</span>
+						<input type="file">
+					</a>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col offset-s3 offset-m2 s3">
+					<a class="publish-cancel waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						取消
+					</a>
+				</div>
+				<div class="input-field col s3 no-margin">
+					<a class="publish-confirm waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						确定
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="card-panel big-shadow" id="publish-creation-box">
+			<div class="row">
+				<div class="col s3 m2 right-align font-big-1 grey-text text-darken-4">
+					<b>发布创意</b>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意名称
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="请输入你的创意名称(20字以内)" id="" type="text" class="validate no-margin" length="20">
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意介绍
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="一句话介绍你的创意(40字以内)" id="" type="text" class="validate no-margin" length="40">
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					选择领域
+				</div>
+				<div class="col s8 m8">
+					<a class="rounded-button waves-effect btn-flat white-text deep-purple lighten-3">学术</a>
+					<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">生活</a>
+					<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">创意</a>
+					<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">其他</a>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意描述
+					<br>
+					<span class="text-lighten-1 grey-text">
+						(1000字以内)
+					</span>
+				</div>
+				<div class="input-field col s6 m6 no-margin">
+					<textarea class="materialize-textarea no-margin" length="1000"></textarea>
+				</div>
+				<div class="col s2 m2 no-margin">
+					<a class=" waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						<i class="material-icons left">file_upload</i>上传图片
+					</a>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col offset-s3 offset-m2 s3">
+					<a class="publish-cancel waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						取消
+					</a>
+				</div>
+				<div class="input-field col s3 no-margin">
+					<a class="publish-confirm waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						确定
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
@@ -1229,6 +1430,32 @@
 
 			$('ul.tabs').tabs({
 				swipeable: true
+			});
+
+			$('.chips-placeholder').material_chip({
+				placeholder: '+ 添加关键词',
+				secondaryPlaceholder: '+ 输入关键词'
+			});
+
+			$('#publish-creation').click(function(info) {
+				$('#publish-creation-box').css('display', 'block');
+				$('#publish-energy-box').css('display', 'none');
+				$('#publish-box').fadeIn(400);
+			});
+
+			$('#publish-energy').click(function(info) {
+				$('#publish-creation-box').css('display', 'none');
+				$('#publish-energy-box').css('display', 'block');
+				$('#publish-box').fadeIn(400);
+			});
+
+			$('.publish-confirm').click(function(info) {
+				$('#publish-box').fadeOut(400);
+				// publish
+			});
+
+			$('.publish-cancel').click(function(info) {
+				$('#publish-box').fadeOut(400);
 			});
 		});
 	</script>
