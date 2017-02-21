@@ -472,6 +472,23 @@
 			height: 36px;
 			line-height: 36px;
 		}
+
+		.mce-ico {
+			color: #888!important;
+		}
+
+		.mce-edit-area.mce-container.mce-panel.mce-stack-layout-item.mce-last {
+			/*border-width: 0 1px 0 0 !important;*/
+		}
+
+		.mce-tinymce.mce-container.mce-panel {
+			border: 1px solid rgba(180, 157, 249, 0.5)!important;
+			border-radius: 3px;
+		}
+		
+		#project_description_ifr {
+			width: calc(100% - 1px)!important;
+		}
 	</style>
 </head>
 
@@ -551,7 +568,7 @@
 											</a>
 											<ul id='dropdown_submit' class='dropdown-content'>
 												<li><a id="publish-creation">发布创意</a></li>
-												<li><a>创意种子大赛</a></li>
+												<li><a id="publish-competition">创意种子大赛</a></li>
 												<li><a id="publish-energy">能源创客</a></li>
 												<li><a>其他比赛</a></li>
 											</ul>
@@ -1229,7 +1246,7 @@
 			</div>
 			<div class="file-field input-field row top-margin-2">
 				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
-					创意名称
+					视频
 				</div>
 				<div class="col s6 m6 no-margin">
 					<div class="file-path-wrapper">
@@ -1319,11 +1336,94 @@
 				</div>
 			</div>
 		</div>
+		<div class="card-panel big-shadow" id="publish-competition-box">
+			<div class="row">
+				<div class="col s3 m2 right-align font-big-1 grey-text text-darken-4">
+					<b>创意种子大赛</b>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意名称
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="请输入你的创意名称(20字以内)" id="" type="text" class="validate no-margin" length="20">
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意简介
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<input placeholder="一句话介绍你的创意(40字以内)" id="" type="text" class="validate no-margin" length="40">
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					关键词
+				</div>
+				<div class="col s8 m8">
+					<div class="chips chips-placeholder"></div>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					选择领域
+				</div>
+				<div class="col s8 m8">
+					<a class="rounded-button waves-effect btn-flat white-text deep-purple lighten-3">学术</a>
+					<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">生活</a>
+					<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">创意</a>
+					<a class="rounded-button waves-effect btn-flat white deep-purple-text text-lighten-4">其他</a>
+				</div>
+			</div>
+			<div class="row top-margin-2 td">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					创意描述
+					<br>
+					<span class="text-lighten-1 grey-text">
+						(1000字内)
+					</span>
+				</div>
+				<div class="input-field col s8 m8 no-margin">
+					<textarea id="project_description" class="materialize-textarea" length="1000"></textarea>
+				</div>
+			</div>
+			<div class="file-field input-field row top-margin-2">
+				<div class="col s3 m2 form-title right-align grey-text text-darken-2">
+					视频
+				</div>
+				<div class="col s6 m6 no-margin">
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+				<div class="col s2 m2 no-margin">
+					<a class="waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						<i class="material-icons left">file_upload</i><span>上传视频</span>
+						<input type="file">
+					</a>
+				</div>
+			</div>
+			<div class="row top-margin-2">
+				<div class="col offset-s3 offset-m2 s3">
+					<a class="publish-cancel waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						取消
+					</a>
+				</div>
+				<div class="input-field col s3 no-margin">
+					<a class="publish-confirm waves-effect waves-light btn deep-purple lighten-2 btn-min-width" style="width:100%;">
+						确定
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 
 	<script>
 		$(document).ready(function() {
@@ -1440,12 +1540,21 @@
 			$('#publish-creation').click(function(info) {
 				$('#publish-creation-box').css('display', 'block');
 				$('#publish-energy-box').css('display', 'none');
+				$('#publish-competition-box').css('display', 'none');
 				$('#publish-box').fadeIn(400);
 			});
 
 			$('#publish-energy').click(function(info) {
 				$('#publish-creation-box').css('display', 'none');
 				$('#publish-energy-box').css('display', 'block');
+				$('#publish-competition-box').css('display', 'none');
+				$('#publish-box').fadeIn(400);
+			});
+
+			$('#publish-competition').click(function(info) {
+				$('#publish-creation-box').css('display', 'none');
+				$('#publish-energy-box').css('display', 'none');
+				$('#publish-competition-box').css('display', 'block');
 				$('#publish-box').fadeIn(400);
 			});
 
@@ -1456,6 +1565,23 @@
 
 			$('.publish-cancel').click(function(info) {
 				$('#publish-box').fadeOut(400);
+			});
+
+			tinymce.init({
+				selector: '#project_description',
+				height: 200,
+				menubar: false,
+				plugins: [
+					'advlist autolink lists link image charmap print preview anchor',
+					'searchreplace visualblocks code fullscreen',
+					'insertdatetime media table contextmenu paste code'
+				],
+				toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link image',
+				// content_css: 'css/materialize.css',
+				skin: 'lightgray',
+				statusbar: false,
+				elementpath: false,
+				theme: 'modern',
 			});
 		});
 	</script>
