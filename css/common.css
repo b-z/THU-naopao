@@ -45,19 +45,19 @@
     padding: 0!important;
 }
 .top-margin {
-    margin-top: 15px;
+    margin-top: 15px!important;
 }
 .top-margin-2 {
-    margin-top: 30px;
+    margin-top: 30px!important;
 }
 .top-margin-3 {
-    margin-top: 45px;
+    margin-top: 45px!important;
 }
 .left-margin {
-    margin-left: 15px;
+    margin-left: 15px!important;
 }
 .top-padding-3 {
-    padding-top: 45px;
+    padding-top: 45px!important;
 }
 .big-shadow {
     box-shadow: 0 16px 24px 2px rgba(180, 180, 180, 0.14), 0 6px 30px 5px rgba(180, 180, 180, 0.12), 0 8px 10px -5px rgba(180, 180, 180, 0.3);
