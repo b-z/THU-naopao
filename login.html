@@ -35,11 +35,27 @@
 		}
 
 		.user-type-icon.vip {
-			background-image: url(img/daka_.png);
+			background-image: url(img/daka.png);
 		}
 
 		.user-type-icon.team {
+			background-image: url(img/tuandui.png);
+		}
+
+		.active .user-type-icon.personal {
+			background-image: url(img/geren_.png);
+		}
+
+		.active .user-type-icon.vip {
+			background-image: url(img/daka_.png);
+		}
+
+		.active .user-type-icon.team {
 			background-image: url(img/tuandui_.png);
+		}
+
+		#login-user-type .active {
+			color: rgb(109, 106, 175);
 		}
 
 		.user-type-icon {
@@ -53,6 +69,7 @@
 		#login-user-type {
 			height: 46px;
 			padding-top: 12px;
+			cursor: pointer;
 		}
 
 		#login-button {
@@ -66,6 +83,10 @@
 
 		input {
 			background-color: white!important;
+		}
+
+		.button-vip-team {
+			display: none;
 		}
 
 	</style>
@@ -82,13 +103,13 @@
 			</div>
 			<div class="left-align top-margin">
 				<div id="login-user-type" class="row no-margin">
-					<div class="col s4">
+					<div class="col s4 personal active">
 						<span class="user-type-icon personal"></span>个人
 					</div>
-					<div class="col s4">
+					<div class="col s4 vip">
 						<span class="user-type-icon vip"></span>大咖
 					</div>
-					<div class="col s4">
+					<div class="col s4 team">
 						<span class="user-type-icon team"></span>团队
 					</div>
 				</div>
@@ -101,16 +122,15 @@
 							<input placeholder="请输入您的密码" id="password" type="password" class="validate">
 						</div>
 						<div class="row no-b-margin">
-							<div class="col s6">
+							<div class="col s12 button-personal">
+								<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
+							</div>
+							<div class="col s6 button-vip-team">
 								<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">申请</a>
 							</div>
-							<div class="col s6">
+							<div class="col s6 button-vip-team">
 								<a id="login-button" class="col s6 waves-effect btn white grey-text text-darken-1">登录</a>
 							</div>
-							<!-- 个人的话，就把上面两个注释掉，保留下边的 -->
-							<!-- <div class="col s12">
-								<a id="login-button" class="waves-effect waves-light btn deep-purple lighten-2">登录</a>
-							</div> -->
 						</div>
 					</div>
 					<div class="row no-margin">
@@ -131,6 +151,27 @@
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 
 	<script>
+	$('#login-user-type .col.personal').click(function() {
+		$('#login-user-type .col.personal').addClass('active');
+		$('#login-user-type .col.vip').removeClass('active');
+		$('#login-user-type .col.team').removeClass('active');
+		$('.button-personal').show();
+		$('.button-vip-team').hide();
+	});
+	$('#login-user-type .col.vip').click(function() {
+		$('#login-user-type .col.personal').removeClass('active');
+		$('#login-user-type .col.vip').addClass('active');
+		$('#login-user-type .col.team').removeClass('active');
+		$('.button-personal').hide();
+		$('.button-vip-team').show();
+	});
+	$('#login-user-type .col.team').click(function() {
+		$('#login-user-type .col.personal').removeClass('active');
+		$('#login-user-type .col.vip').removeClass('active');
+		$('#login-user-type .col.team').addClass('active');
+		$('.button-personal').hide();
+		$('.button-vip-team').show();
+	});
 	</script>
 
 </body>
